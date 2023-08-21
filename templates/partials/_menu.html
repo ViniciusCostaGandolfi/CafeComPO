@@ -1,0 +1,47 @@
+{% load static %}
+
+{% comment %} <nav  class="navbar navbar-expand-lg fixed sticky-top navbar__menu navbar__default-transparent">
+        <img src="{% static 'images/POCafeLogo.png' %}" alt="Logo" class='navbar-brand p-0 me-0 me-lg-2 navbar__logo'>    
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/events">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about_us">Sobre Nós</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+</nav> {% endcomment %}
+
+
+<nav class="navbar navbar-expand-lg fixed-top menu__home__navbar navbar__default-transparent">
+    <div class="container-fluid " >
+      <img src="{% static 'images/POCafeLogo.png' %}" alt="Logo" class='navbar-brand p-0 me-0 me-lg-2 navbar__logo'>    
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse menu__home__navbar" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Início</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/">Eventos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about_us">Sobre Nós</a>
+          </li>
+      </div>
+    </div>
+  </nav>
