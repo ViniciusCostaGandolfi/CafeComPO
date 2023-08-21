@@ -24,4 +24,5 @@ RUN python3 manage.py collectstatic --noinput
 EXPOSE 8000
 
 # Define the command to run your app
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "setup.wsgi:application"]
+# CMD ["gunicorn", "--bind", "0.0.0.0:8000", "setup.wsgi:application"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "--static-map", "/static=/app/staticfiles", "setup.wsgi:application"]
