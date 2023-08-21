@@ -1,0 +1,18 @@
+.home__image__card {
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.home__image__po {
+    background-image: url('/static/images/card__po.png');    
+}
+
+.home__image__ia {
+    background-image: url('/static/images/card__ia.png');    
+}
+
+.home__image__mcda {
+    background-image: url('/static/images/card__mcda.png');    
+}

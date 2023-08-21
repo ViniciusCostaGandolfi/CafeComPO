@@ -1,0 +1,61 @@
+.menu__home__navbar {
+    flex-grow: 0;
+}
+
+.navbar__default-color {
+    background-color: #fdfdfd81;
+    backdrop-filter: blur(1px);
+}
+
+.navbar__default-transparent {
+    background-color: #ffffff00;
+
+}
+
+.navbar__logo {
+
+    width: 25%;
+    
+}
+
+/* Aplicar quando a largura da tela for menor que um determinado valor */
+@media (max-width: 1000px) {
+    .navbar__logo {
+        width: 70%;
+    }
+    .navbar__menu {
+        display: block ruby;
+    }
+}
+
+.carousel__image {
+    background-image: url('/static/images/carouselDS.png'); /* Caminho para a imagem de fundo */    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.7;
+    height: 75vh;
+
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%; /* Posiciona a metade superior do elemento no centro vertical */
+    left: 0;
+    right: 0;
+    transform: translateY(-50%); /* Move o elemento para cima em 50% da sua própria altura */
+    color: #333333;
+    text-align: center;
+}
+
+  .carousel-caption__title{
+    color: #333333;
+    font-size: 5rem;
+  }
+
+  .carousel-caption__description{
+    color: #333333;
+    font-size: 2rem;
+  }
