@@ -17,6 +17,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the current directory contents into the container at /app
 COPY . /app/
 
+# Run the collectstatic command
+RUN python3 manage.py collectstatic --noinput
+
 # Expose the port that the app will run on
 EXPOSE 8000
 
