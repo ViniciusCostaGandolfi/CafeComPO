@@ -28,7 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['cafecompo.up.railway.app', 'https://*.127.0.0.1', '*.up.railway.app', '*']
 
-CSRF_TRUSTED_ORIGINS = ['cafecompo.up.railway.app', 'https://*.127.0.0.1', '*.up.railway.app', '*']
+CSRF_TRUSTED_ORIGINS = ['http://*', 'https://*.up.railway.app', 'https://cafecompo.up.railway.app', 'https://*.127.0.0.1']
 
 
 # Application definition
