@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-*$5f9d)+=*&x)jq9to)i2=ertm@bab!o!3tb+74(p8qt=$#!k3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['cafecompo.up.railway.app', 'https://*.127.0.0.1','*']
+ALLOWED_HOSTS = ['cafecompo.up.railway.app', 'https://*.127.0.0.1', '*.up.railway.app', '*']
+
+CSRF_TRUSTED_ORIGINS = ['cafecompo.up.railway.app', 'https://*.127.0.0.1', '*.up.railway.app', '*']
 
 
 # Application definition
