@@ -17,15 +17,21 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the current directory contents into the container at /app
 COPY . /app/
 
+
+
 # Run the collectstatic command
 RUN python3 manage.py collectstatic --noinput
 
 # Expose the port that the app will run on
+
 EXPOSE 8000
 
+
+
 # Define the command to run your app
-CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
-# CMD ["gunicorn", "--bind", "0.0.0.0:8000", "--static-map", "/static=/app/staticfiles", "core.wsgi:application"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "core.wsgi:application"]
+
+# CMD ["gunicorn", "--bind", "0.0.0.0:8000", "core.wsgi:application"]
 # CMD ["gunicorn", "--bind", "0.0.0.0:8000", "core.wsgi:application"]
 # CMD ["gunicorn", "--bind", "0.0.0.0:8000", "setup.wsgi:application"]
 # CMD ["gunicorn", "--bind", "0.0.0.0:8000", "--static-map", "/static=/app/staticfiles", "setup.wsgi:application"]
