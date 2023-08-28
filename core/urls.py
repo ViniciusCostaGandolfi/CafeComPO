@@ -17,15 +17,21 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.conf import settings
+from django.conf.urls.static import static
 
 
-from events.views import HomeEventView, AboutUsEventView
+
+from events.views import EventsView, HomeEventView, AboutUsEventView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('about_us', AboutUsEventView.as_view()),
-    path('', HomeEventView.as_view())
+    path('', HomeEventView.as_view()),
+    path('events/', EventsView.as_view(), name='events-list'),
+    path('events/<int:event_id>/', EventsView.as_view(), name='event-detail'),
 ]
 
-
 urlpatterns += staticfiles_urlpatterns()
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
