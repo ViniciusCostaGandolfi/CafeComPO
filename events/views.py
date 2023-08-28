@@ -5,42 +5,35 @@ from django.shortcuts import render
 
 from events.models import BlogPost
 
+from django.utils import timezone
+
 class HomeEventView(View):
     
     template_name = 'home/index.html'
 
     def get(self, request: HttpRequest, *args, **kwargs):
-        blog_posts = BlogPost.objects.all()
-        if len(blog_posts) < 1:
-            blog_posts = [
-                {
-                    "category": "PO",
-                    "date": "2023-08-17",
-                    "hour": "12:30:00",
-                    "locale": "New York",
-                    "title": "Introduction to PO",
-                    "description": "This is an introduction to the concept of PO."
-                },
-                {
-                    "category": "IA",
-                    "date": "2023-07-20",
-                    "hour": "15:45:00",
-                    "locale": "London",
-                    "title": "Advanced IA Techniques",
-                    "description": "Explore advanced techniques in IA."
-                },
-                {
-                    "category": "MCDA",
-                    "date": "2023-09-05",
-                    "hour": "10:00:00",
-                    "locale": "Paris",
-                    "title": "Understanding MCDA",
-                    "description": "Learn about Multiple Criteria Decision Analysis."
-                }
-            ]
         
+        carousels: list[dict[str, str]] = [
+            {'title': 'PO', 'description': 'Algotimos de pesquisa operacional, heurísticas e meta-heurísticas'},
+            {'title': 'IA', 'description': 'Algotimos de inteligencia artificial para regressão e classificação'},
+            {'title': 'MCDA', 'description': 'Algotimos de apoio a decisão multicritério para ordenamento e classificação'},
+            {'title': 'DS', 'description': 'Ciência da análise de quantidades massivas de dados, probabilidade e estatística'},
+            {'title': 'SIMU', 'description': 'Simulação de eventos discretos, teria das filas, entre outros'}
+            
+            
+        ]
         
-        return render(request, self.template_name, {"blog_posts": blog_posts})
+        # Primeira parte da consulta: eventos futuros ordenados por data crescente
+        future_events = BlogPost.objects.filter(date__gte=timezone.now()).order_by('date')
+        
+        # Segunda parte da consulta: eventos passados ordenados por data decrescente
+        past_events = BlogPost.objects.filter(date__lt=timezone.now()).order_by('-date')
+        
+        # Combinando as duas partes da consulta
+        blog_posts = list(future_events) + list(past_events)
+        
+        return render(request, self.template_name, {"blog_posts": blog_posts, "carousels": carousels})
+
 
 
 class AboutUsEventView(View):
