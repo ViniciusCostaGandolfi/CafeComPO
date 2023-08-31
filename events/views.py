@@ -14,11 +14,11 @@ class HomeEventView(View):
     def get(self, request: HttpRequest, *args, **kwargs):
         
         carousels: list[dict[str, str]] = [
-            {'title': 'PO', 'description': 'Algotimos de pesquisa operacional, metodologias, heurísticas e meta-heurísticas'},
-            {'title': 'IA', 'description': 'Algotimos de inteligência artificial para regressão e clusterização'},
+            {'title': 'PO', 'description': 'Algoritmos de pesquisa operacional, metodologias, heurísticas e meta-heurísticas'},
+            {'title': 'IA', 'description': 'Algoritmos de inteligência artificial para regressão e clusterização'},
             {'title': 'Data Science', 'description': 'Ciência da análise de quantidades massivas de dados, probabilidade e estatística'},
             {'title': 'Modelagem', 'description': 'Modelagem matemática, técnicas avançadas de otimização e métodos de resolução'},
-            {'title': 'MCDA', 'description': 'Algotimos de apoio a decisão multicritério para ordenamento e classificação'},
+            {'title': 'MCDA', 'description': 'Algoritmos de apoio à decisão multicritério para ordenamento e classificação'},
             {'title': 'Simulação', 'description': 'Simulação de eventos discretos, modelos probabilísticos e teoria de filas'},
             
             
