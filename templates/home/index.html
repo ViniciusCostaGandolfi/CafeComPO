@@ -48,7 +48,12 @@
             </div>
             <div class="text-center">
               <div class="d-flex flex-row align-items-center w-100 pb-1">
-                <img class="rounded-circle" alt="avatar1" src="{{ post.speaker_id.photo.url }}" width="100" />
+                {% if post.speaker_id.photo %}
+                  <img class="rounded-circle" alt="avatar1" src="{{ post.speaker_id.photo.url }}" width="100" />
+                {% else %}
+                  <img class="rounded-circle" alt="avatar1" src="{% static 'images/no_photo.png' %}" width="100" />
+                {% endif %}
+
                 <p class="ps-1 card-title">{{ post.speaker_id.name }}</p>
               </div>
             </div>

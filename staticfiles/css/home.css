@@ -5,6 +5,14 @@
     background-repeat: no-repeat;
 }
 
+.home__card__image__icon {
+    width: 30%;
+    opacity: 0.9;
+    filter: brightness(150%);
+
+    
+}
+
 .home__image__po {
     background-image: url('/static/images/card__po.png');    
 }
@@ -24,4 +32,14 @@
     background-repeat: no-repeat;
     background-image: url('/static/images/carouselDS.png');    
 
+}
+
+
+@media (max-width: 768px) {
+    .home__card__image__icon {
+        opacity: 0.9;
+        filter: brightness(150%);
+        flex-grow: 1;
+        
+    }
 }

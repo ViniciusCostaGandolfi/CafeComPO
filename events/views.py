@@ -31,12 +31,16 @@ class HomeEventView(View):
         blog_posts = list(future_events) + list(past_events)
         
         for post in blog_posts:
-            if len(post.title) > 50:
-                post.title = post.title[:50] + "..."
+            if len(post.title) > 100:
+                post.title = post.title[:100] + "..."
             if len(post.description) > 100:
                 post.description = post.description[:100] + "..."
                 
-        return render(request, self.template_name, {"blog_posts": blog_posts, "carousels": carousels})    
+        return render(request, self.template_name, {"blog_posts": blog_posts, "carousels": carousels})  
+    
+    
+    
+      
 class EventsView(View):
     template_list = 'events/events_list.html'
     template_detail = 'events/event_detail.html'
@@ -62,4 +66,10 @@ class AboutUsEventView(View):
     template_name = 'about-us/index.html'
 
     def get(self, request: HttpRequest, *args, **kwargs):
-        return render(request, self.template_name)
+        persons = [
+            {"name": "Vinicius",  "description": "Aluno de graduação na FCA-Unicamp", "photo": "images/organization/vinicius.jpeg", "email": "v245274@dac.unicamp.br"},
+            {"name": "Washington", "description": "Doscente na FCA-Unicamp","photo": "images/organization/washington.jpg", "email": "washington.oliveira@fca.unicamp.br"},
+            {"name": "Nilmara",  "description": "Aluno de pós graduação na FCA-Unicamp", "photo": "images/organization/nilmara.jpg", "email": "nilmarabiscaia@gmail.com"},
+
+        ]
+        return render(request, self.template_name, {"persons": persons})
