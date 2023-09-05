@@ -24,17 +24,19 @@ class HomeEventView(View):
             
         ]
         
-        # Primeira parte da consulta: eventos futuros ordenados por data crescente
         future_events = Event.objects.filter(date__gte=timezone.now()).order_by('date')
         
-        # Segunda parte da consulta: eventos passados ordenados por data decrescente
         past_events = Event.objects.filter(date__lt=timezone.now()).order_by('-date')
         
-        # Combinando as duas partes da consulta
         blog_posts = list(future_events) + list(past_events)
         
-        return render(request, self.template_name, {"blog_posts": blog_posts, "carousels": carousels})
-    
+        for post in blog_posts:
+            if len(post.title) > 50:
+                post.title = post.title[:50] + "..."
+            if len(post.description) > 100:
+                post.description = post.description[:100] + "..."
+                
+        return render(request, self.template_name, {"blog_posts": blog_posts, "carousels": carousels})    
 class EventsView(View):
     template_list = 'events/events_list.html'
     template_detail = 'events/event_detail.html'

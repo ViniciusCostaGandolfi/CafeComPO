@@ -1,6 +1,7 @@
 # Use an official Python runtime as a parent image
 FROM python:3.10
 
+
 # Set environment variables (optional)
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1

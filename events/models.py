@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import formats
 
 
 class Speaker(models.Model):
@@ -25,7 +26,14 @@ class Event(models.Model):
     locale = models.CharField(max_length=100)
     title = models.CharField(default='Em Breve', max_length=100, blank=True)
     speaker_id = models.ForeignKey(Speaker, null=True, blank=True, on_delete=models.CASCADE)
-    description = models.TextField(default='', max_length=500)
+    description = models.TextField(default='', max_length=1024)
+    file = models.FileField(null=True, upload_to="mediafiles/pdfs")
+    
+    def data_formatada(self):
+        return formats.date_format(self.date, "SHORT_DATE_FORMAT")
+
+    def mes_em_portugues(self):
+        return formats.date_format(self.date, "F")
 
     def __str__(self):
         return f"{self.category} - {self.date} - {self.title}"

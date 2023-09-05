@@ -8,7 +8,7 @@
     padding-top: 110px;
     padding-bottom:110px;
     height: 70vh;
-    opacity: 0.9;
+    opacity: 0.7;
     display: flex;
     flex-direction: column;
     text-align :left;
@@ -17,16 +17,25 @@
 
 .aboutus__banner__container {
     align-items: end;
+    opacity: 1;
 }
 
 .aboutus__banner__container__title {
     font-family: Roboto;
     font-size: 3rem;
+    color: #020202;
+
     font-weight: bolder;
+    opacity: 1;
+
 }
 
 .aboutus__banner__container__text {
     font-size: 1.25rem;
+    font-weight: bold;
+    color: #020202;
+    opacity: 1;
+
 }
 
 .center-content {
