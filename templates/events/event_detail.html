@@ -2,6 +2,63 @@
 {% load static %}
 {% block content %}
 
+<div class="container text-center vh-100 ">
+    <div style="padding-top: 35vh;"></div>
+    <div class="row">
+        <h2>
+            {{event.title}}
 
+        </h2>
+    </div>
+    <div class="row pt-5">
+        <div class="col">
+            <div class="d-flex align-items-center flex-column">
+                <div class="w-50">
+                    <div class="d-flex flex-column align-items-center">
+                        <h3>{{event.get_category_display}}</h1>
+                        <img class="home__card__image__icon " src="{% static 'images/icons/'|add:event.get_category_display %}.svg" alt="Ícone"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="d-flex align-items-center flex-column">
+
+                <div class="text-center">
+                    <h2 class="ps-1 card-title"> Por {{ event.speaker_id.name }}</h3>
+                    <div class="d-flex flex-column align-items-center w-100 pb-1">
+                      {% if event.speaker_id.photo %}
+                        <img class="rounded-circle" alt="avatar1" src="{{ event.speaker_id.photo.url }}" width="100" />
+                      {% else %}
+                        <img class="rounded-circle" alt="avatar1" src="{% static 'images/no_photo.png' %}" width="100" />
+                      {% endif %}
+        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row pt-5">
+
+        <div class="align-items-center d-flex flex-column max-vw-90">
+            <h5 class="text-center">
+                {{event.description}}
+            </h5>
+
+        </div>
+    </div>
+
+    {%if event.file%}
+
+    <div class="row pt-5">
+        <div class="align-items-center d-flex flex-column max-vw-90">
+            <a type="button" class="btn btn-primary">Baixar Apresentação</a>
+        </div>
+    </div>
+
+    {% endif %}
+
+
+</div>
 
 {% endblock %}
