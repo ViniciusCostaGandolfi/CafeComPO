@@ -23,7 +23,7 @@ from django.conf.urls.static import static
 
 
 from events.views import EventsView, HomeEventView, AboutUsEventView
-
+#skajhdhadlkk
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('about_us', AboutUsEventView.as_view()),
