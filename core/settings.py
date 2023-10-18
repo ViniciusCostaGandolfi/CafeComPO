@@ -12,8 +12,10 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 import os
 from pathlib import Path
+from dotenv import load_dotenv
 
-import dj_database_url
+load_dotenv()
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -86,16 +88,29 @@ WSGI_APPLICATION = 'core.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': 'sqlite3-production-31f7.db',  # Nome do arquivo do SQLite3 no Railway
+#         'HOST': 'sqlite3-production-31f7.up.railway.app',  # Domínio do Railway
+#         'PORT': '',  # Deixe vazio ou remova esta linha
+#         'USER': '',  # Deixe vazio ou remova esta linha
+#         'PASSWORD': 'qhe-jzfc7r@qurjx',  # Sua senha do Railway
+#     }
+# }
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'sqlite3-production-31f7.db',  # Nome do arquivo do SQLite3 no Railway
-        'HOST': 'sqlite3-production-31f7.up.railway.app',  # Domínio do Railway
-        'PORT': '',  # Deixe vazio ou remova esta linha
-        'USER': '',  # Deixe vazio ou remova esta linha
-        'PASSWORD': 'qhe-jzfc7r@qurjx',  # Sua senha do Railway
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('PGDATABASE'),
+        'USER': os.environ.get('PGUSER'),
+        'PASSWORD': os.environ.get('PGPASSWORD'),
+        'HOST': os.environ.get('PGHOST'),
+        'PORT': os.environ.get('PGPORT'),
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

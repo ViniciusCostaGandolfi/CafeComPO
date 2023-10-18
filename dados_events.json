@@ -1,0 +1,209 @@
+[
+{
+  "model": "events.event",
+  "pk": 1,
+  "fields": {
+    "category": "MODE",
+    "date": "2023-08-30",
+    "hour": "13:00:00",
+    "locale": "UL65",
+    "title": "Onde mora a incerteza fuzzy?",
+    "speaker_id": 1,
+    "description": "Nesse seminário serão discutidas incertezas subjetivas, imprecisas e por insuficiência de informação. Aplicações das incertezas tipo fuzzy serão expostas e discutidas.",
+    "file": ""
+  }
+},
+{
+  "model": "events.event",
+  "pk": 2,
+  "fields": {
+    "category": "PO",
+    "date": "2023-09-20",
+    "hour": "13:00:00",
+    "locale": "UL65",
+    "title": "Abordagem multiobjetivo para o problema de localização e alocação de mamógrafos",
+    "speaker_id": 4,
+    "description": "A detecção precoce do câncer de mama é fator determinante no tratamento e sobrevida das pacientes. Neste contexto, a disponibilidade e localização adequada dos equipamentos de mamografia é crucial.",
+    "file": ""
+  }
+},
+{
+  "model": "events.event",
+  "pk": 3,
+  "fields": {
+    "category": "IA",
+    "date": "2023-10-04",
+    "hour": "13:00:00",
+    "locale": "UL65",
+    "title": "Retro Branching and Bound",
+    "speaker_id": 8,
+    "description": "Utilizações de métodos de aprendizado por reforço para diminuir o número de iterações do B&B.",
+    "file": ""
+  }
+},
+{
+  "model": "events.event",
+  "pk": 4,
+  "fields": {
+    "category": "MODE",
+    "date": "2023-10-18",
+    "hour": "13:00:00",
+    "locale": "UL65",
+    "title": "Uma Abordagem Geométrica para Separação Cega de Fontes em um Modelo de Mistura baseado na Integral d",
+    "speaker_id": 5,
+    "description": "A separação cega de fontes (BSS – blind source separation) tem como finalidade a extração de sinais a partir de misturas observadas de tais sinais. Neste seminário apresentaremos uma abordagem geométrica para o problema de separação cega de fontes em um modelo de mistura baseado na integral de Choquet, focando no problema de identificação do processo de mistura.",
+    "file": ""
+  }
+},
+{
+  "model": "events.event",
+  "pk": 5,
+  "fields": {
+    "category": "MCDA",
+    "date": "2023-11-01",
+    "hour": "13:00:00",
+    "locale": "UL65",
+    "title": "Econofísica Aplicada",
+    "speaker_id": 6,
+    "description": "Nesta conversa buscaremos entender os fundamentos físicos e estatísticos que norteiam o comportamento de ativos financeiros. Embora os estudiosos possam traçar a trajetória do mercado minuto a minuto, é muito difícil a observação de quem compra, quem vende e como a demanda e a oferta afetam os movimentos de preços. Existem muitas teoria sobre como o comportamento de diferentes investidores faz com que os preços se movam, mas não há nenhuma evidência empírica que apoie a ligação crítica entre as decisões dos investidores e a dinâmica dos preços. O movimento browniano é então utilizado como um modelo que possibilita a busca pela compreensão desse cenário.",
+    "file": ""
+  }
+},
+{
+  "model": "events.event",
+  "pk": 6,
+  "fields": {
+    "category": "SIMU",
+    "date": "2023-11-22",
+    "hour": "13:00:00",
+    "locale": "UL65",
+    "title": "Em Breve",
+    "speaker_id": 7,
+    "description": "Em Breve",
+    "file": ""
+  }
+},
+{
+  "model": "events.event",
+  "pk": 7,
+  "fields": {
+    "category": "PO",
+    "date": "2023-11-29",
+    "hour": "13:00:00",
+    "locale": "UL65",
+    "title": "Em Breve",
+    "speaker_id": 2,
+    "description": "Ultimo encontro de 2023",
+    "file": ""
+  }
+},
+{
+  "model": "events.event",
+  "pk": 8,
+  "fields": {
+    "category": "DS",
+    "date": "2023-09-06",
+    "hour": "13:00:00",
+    "locale": "UL65",
+    "title": "Bilinear and Linear-Quadratic Matrix Factorization Methods for Hyperspectral Unmixing",
+    "speaker_id": 3,
+    "description": "Em Breve",
+    "file": ""
+  }
+},
+{
+  "model": "events.event",
+  "pk": 9,
+  "fields": {
+    "category": "PO",
+    "date": "2023-10-26",
+    "hour": "13:00:00",
+    "locale": "UL65",
+    "title": "Spiked tensor models through the prism of random matrix theory",
+    "speaker_id": 9,
+    "description": "Numerous problems in signal processing, machine learning and beyond can be addressed by decomposing some low-rank structure hidden in a noisy observed data tensor. While several algorithms exist for this task, little is known about their actual performance in practice, and also about fundamental statistical limits. Substantial progress has been recently made in the rank-one, large-dimensional case. In particular, we have proposed an approach based on tools from random matrix theory for studying the maximum likelihood estimation of the so-called spiked (rank-one) tensor model. In this talk, I will introduce this approach and discuss some recent extensions by us and others, notably to the study of deflation schemes for tensor decomposition.",
+    "file": ""
+  }
+},
+{
+  "model": "events.speaker",
+  "pk": 1,
+  "fields": {
+    "name": "Nilmara Biscaia",
+    "photo": "265809818_422937112665967_765988549444746680_n.jpg",
+    "description": "Pós graduanda em engenharia de produção"
+  }
+},
+{
+  "model": "events.speaker",
+  "pk": 2,
+  "fields": {
+    "name": "Em Breve",
+    "photo": "1144760.png",
+    "description": "Em Breve"
+  }
+},
+{
+  "model": "events.speaker",
+  "pk": 3,
+  "fields": {
+    "name": "Alejandra Quezada",
+    "photo": "366753564_3105522012924796_345560305445757065_n.jpg",
+    "description": "..."
+  }
+},
+{
+  "model": "events.speaker",
+  "pk": 4,
+  "fields": {
+    "name": "Yerlis Valdelamar Gonzalez",
+    "photo": "e8397d4c-5934-43a6-8b16-e1ed088fa53b.jpeg",
+    "description": ""
+  }
+},
+{
+  "model": "events.speaker",
+  "pk": 5,
+  "fields": {
+    "name": "Gláucia Jardim Pissinelli",
+    "photo": "",
+    "description": ""
+  }
+},
+{
+  "model": "events.speaker",
+  "pk": 6,
+  "fields": {
+    "name": "Yuri Alexandre Meyer",
+    "photo": "",
+    "description": ""
+  }
+},
+{
+  "model": "events.speaker",
+  "pk": 7,
+  "fields": {
+    "name": "Carlos Quiroga",
+    "photo": "",
+    "description": ""
+  }
+},
+{
+  "model": "events.speaker",
+  "pk": 8,
+  "fields": {
+    "name": "Vinicius e Saulo",
+    "photo": "22_jsdjkaknskjnkajsdlkkjal.png",
+    "description": "Estudantes do LAD2"
+  }
+},
+{
+  "model": "events.speaker",
+  "pk": 9,
+  "fields": {
+    "name": "Prof. José Henrique de Morais Goulart",
+    "photo": "",
+    "description": ""
+  }
+}
+]

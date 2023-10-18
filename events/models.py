@@ -11,7 +11,7 @@ class Speaker(models.Model):
         return f"{self.name}"
 
 class Event(models.Model):
-    CATEGORY = [
+    CATEGORY = [ 
         ('PO', 'PO'),
         ('IA', 'IA'),
         ('MODE', 'Modelagem'),
