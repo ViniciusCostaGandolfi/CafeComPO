@@ -67,9 +67,8 @@ class AboutUsEventView(View):
 
     def get(self, request: HttpRequest, *args, **kwargs):
         persons = [
-            {"name": "Vinicius",  "description": "Aluno de graduação na FCA-Unicamp", "photo": "images/organization/vinicius.jpeg", "email": "v245274@dac.unicamp.br"},
-            {"name": "Washington", "description": "Doscente na FCA-Unicamp","photo": "images/organization/washington.jpg", "email": "washington.oliveira@fca.unicamp.br"},
-            {"name": "Nilmara",  "description": "Aluno de pós graduação na FCA-Unicamp", "photo": "images/organization/nilmara.jpg", "email": "nilmarabiscaia@gmail.com"},
-
+            {"name": "Washington A. Oliveira", "description": "Docente na FCA-Unicamp","photo": "images/organization/washington.jpg", "email": "washington.oliveira@fca.unicamp.br"},
+            {"name": "Nilmara J. B. Pinto",  "description": "Pós-doutoranda na FCA-Unicamp", "photo": "images/organization/nilmara.jpg", "email": "nilmarabiscaia@gmail.com"},
+            {"name": "Vinícius Costa",  "description": "Aluno de graduação na FCA-Unicamp", "photo": "images/organization/vinicius.jpeg", "email": "v245274@dac.unicamp.br"},
         ]
         return render(request, self.template_name, {"persons": persons})
